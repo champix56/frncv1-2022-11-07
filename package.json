@@ -7,7 +7,8 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "gen_jsfunc":"npx generate-react-cli c --type=gen_js_func"
   },
   "dependencies": {
     "react": "18.1.0",
