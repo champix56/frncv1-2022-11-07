@@ -5,7 +5,7 @@ import AppStylesheet from './App.styles';
 function App(props) {
   return (
     <View>
-      <Text style={AppStylesheet.textBlue}>
+      <Text style={{...AppStylesheet.textBlue, ...AppStylesheet.underline}}>
         DEMAT BREIZH
       </Text>
     </View>

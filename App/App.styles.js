@@ -5,7 +5,7 @@ const AppStylesheet = StyleSheet.create({
     color: 'skyblue',
   },
   underline: {
-    textDecoration: 'underline',
+    textDecorationLine: 'underline',
   },
 });
 export default AppStylesheet;
