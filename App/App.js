@@ -9,7 +9,7 @@ function App(props) {
       <Text style={{...AppStylesheet.textBlue, ...AppStylesheet.underline}}>
         DEMAT BREIZH
       </Text>
-      <Button />
+      <Button textDuButton="un button simple" />
     </View>
   );
 }
