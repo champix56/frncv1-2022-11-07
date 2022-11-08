@@ -7,5 +7,10 @@ const AppStylesheet = StyleSheet.create({
   underline: {
     textDecorationLine: 'underline',
   },
+  buttonContent: {
+    textAlign: 'center',
+    color: 'white',
+    fontWeight: '900',
+  },
 });
 export default AppStylesheet;

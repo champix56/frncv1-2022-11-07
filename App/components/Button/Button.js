@@ -6,7 +6,7 @@ const Button = props => {
   console.log(props);
   return (
     <TouchableHighlight style={ButtonStylesheet.Button} testID="Button">
-      <Text style={ButtonStylesheet.contentText}>{props.textDuButton}</Text>
+      {props.children}
     </TouchableHighlight>
   );
 };

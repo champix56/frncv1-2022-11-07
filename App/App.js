@@ -9,7 +9,11 @@ function App(props) {
       <Text style={{...AppStylesheet.textBlue, ...AppStylesheet.underline}}>
         DEMAT BREIZH
       </Text>
-      <Button textDuButton="un button simple" />
+      <Button>
+        <View>
+          <Text style={AppStylesheet.buttonContent}>sdfhgjjkijuhygts</Text>
+        </View>
+      </Button>
     </View>
   );
 }
