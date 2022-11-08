@@ -1,13 +1,13 @@
 import React from 'react';
-import {Text, TouchableHighlight, View} from 'react-native';
+import {Pressable, Text, TouchableHighlight, View} from 'react-native';
 import ButtonStylesheet from './Button.styles';
 
 const Button = props => {
   console.log(props);
   return (
-    <TouchableHighlight testID="Button">
+    <Pressable testID="Button" onPress={props.onPress}>
       <View style={ButtonStylesheet.Button}>{props.children}</View>
-    </TouchableHighlight>
+    </Pressable>
   );
 };
 export default Button;
