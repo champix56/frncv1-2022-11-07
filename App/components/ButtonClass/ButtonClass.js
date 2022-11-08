@@ -5,6 +5,9 @@ import ButtonClassStylesheet from './ButtonClass.styles';
 class ButtonClass extends React.PureComponent {
   constructor(props) {
     super(props);
+    this.state = {
+      isClicked: false,
+    };
   }
   render() {
     return (
