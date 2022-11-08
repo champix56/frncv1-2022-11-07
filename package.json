@@ -8,9 +8,11 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "gen_jsfunc":"npx generate-react-cli c --type=gen_js_func"
+    "gen_jsfunc": "npx generate-react-cli c --type=gen_js_func",
+    "json": "json-server -p 775 db/db.json"
   },
   "dependencies": {
+    "json-server": "^0.17.1",
     "react": "18.1.0",
     "react-native": "0.70.5"
   },
