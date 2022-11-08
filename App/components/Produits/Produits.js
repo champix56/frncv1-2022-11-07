@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {View} from 'react-native';
 import ProduitsScrollContainer from '../ProduitsScrollContainer/ProduitsScrollContainer';
 import ProduitsStylesheet from './Produits.styles';
 import PropTypes from 'prop-types';
@@ -13,5 +13,8 @@ const Produits = props => {
 };
 Produits.propTypes = {
   produits: PropTypes.array.isRequired,
+};
+Produits.defaultProps = {
+  produits: [],
 };
 export default Produits;
