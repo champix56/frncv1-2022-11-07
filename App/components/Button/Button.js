@@ -5,8 +5,8 @@ import ButtonStylesheet from './Button.styles';
 const Button = props => {
   console.log(props);
   return (
-    <TouchableHighlight style={ButtonStylesheet.Button} testID="Button">
-      {props.children}
+    <TouchableHighlight testID="Button">
+      <View style={ButtonStylesheet.Button}>{props.children}</View>
     </TouchableHighlight>
   );
 };
