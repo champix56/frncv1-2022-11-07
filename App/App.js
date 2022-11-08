@@ -5,8 +5,9 @@ import Button from './components/Button/Button';
 import ButtonClass from './components/ButtonClass/ButtonClass';
 import Produits from './components/Produits/Produits';
 import Splash from './components/Splash/Splash';
-
+import {store} from './store/produit.reducer';
 function App(props) {
+  console.log(store);
   const [screen, setscreen] = useState(null);
   const [produits, setproduits] = useState([]);
   useEffect(() => {
