@@ -13,9 +13,9 @@ const ProduitsScrollContainer: React.FunctionComponent<
   return (
     <ScrollView
       style={ProduitsScrollContainerStylesheet.ProduitsScrollContainer}>
-      <View>
+      <View style={ProduitsScrollContainerStylesheet.mainView}>
         {props.produits.map((e, i) => (
-          <ProduitThumbnail key={`produit${i}`} {...e} />
+          <ProduitThumbnail key={`produit${i}`} {...e}/>
         ))}
       </View>
     </ScrollView>
