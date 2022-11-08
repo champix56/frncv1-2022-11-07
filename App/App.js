@@ -1,10 +1,13 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Text, View} from 'react-native';
 import AppStylesheet from './App.styles';
 import Button from './components/Button/Button';
 
 function App(props) {
   const [counter, setcounter] = useState(0);
+  useEffect(() => {
+    console.log('avec effet', counter);
+  }, [counter]);
   return (
     <View>
       <Text
