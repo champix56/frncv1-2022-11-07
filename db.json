@@ -23,30 +23,6 @@
       "nom": "mam goudig",
       "image": "https://m.media-amazon.com/images/I/41hkbkrf3RL._AC_.jpg",
       "prix": 5.0
-    },
-    {
-        "id": 6,
-        "nom": "triskel or",
-        "image": "https://www.bobijoo.fr/21389-large_default/bijou-breton-pendentif-triskel-symbole-celte-acier-et-or.jpg",
-        "prix": 5.00
-    },
-    {
-        "id": 7,
-        "nom": "triskel",
-        "image": "https://m.media-amazon.com/images/I/41BJAsegE6L.jpg",
-        "prix": 5.00
-    },
-    {
-        "id": 8,
-        "nom": "far breton",
-        "image": "https://www.cuisineactuelle.fr/imgre/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fcac.2F2018.2F09.2F25.2F387ffcdf-53f4-4e4a-b5fa-2aef56117a4b.2Ejpeg/750x562/quality/80/crop-from/center/cr/wqkgUmFkdmFuZXIvU3VjcsOpIHNhbMOpIC8gQ3Vpc2luZSBBY3R1ZWxsZQ%3D%3D/far-breton-aux-pruneaux-facon-cyril-lignac.jpeg",
-        "prix": 5.00
-    },
-    {
-        "id": 10,
-        "nom": "drapeau",
-        "image": "https://previews.123rf.com/images/1enchik/1enchik1612/1enchik161200052/67988527-vector-gwen-ha-du-drapeau-breton-plat-signe-stylis%C3%A9-en-fran%C3%A7ais-noir-et-blanc.jpg",
-        "prix": 5.00
     }
   ]
 }
