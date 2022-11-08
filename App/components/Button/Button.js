@@ -5,7 +5,11 @@ import ButtonStylesheet from './Button.styles';
 const Button = props => {
   console.log(props);
   return (
-    <Pressable testID="Button" onPress={props.onPress}>
+    <Pressable
+      testID="Button"
+      onPress={e => {
+        props.onPress('hello');
+      }}>
       <View style={ButtonStylesheet.Button}>{props.children}</View>
     </Pressable>
   );
