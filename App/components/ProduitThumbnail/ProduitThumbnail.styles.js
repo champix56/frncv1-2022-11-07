@@ -9,5 +9,11 @@ const ProduitThumbnailStylesheet = StyleSheet.create({
     flexDirection: 'column',
     margin: 5,
   },
+  ImageContainer: {flexDirection: 'row', justifyContent: 'center'},
+  Image: {
+    width: 50,
+    height: 50,
+  },
+  Name: {textAlign: 'center'},
 });
 export default ProduitThumbnailStylesheet;

@@ -8,10 +8,13 @@ const ProduitThumbnail: React.FC<I_Produit> = props => {
     <View
       style={ProduitThumbnailStylesheet.ProduitThumbnail}
       testID="ProduitThumbnail">
-      <View style={{flexDirection: 'row', justifyContent: 'center'}}>
-        <Image style={{height: 50, width: 50}} source={{uri: props.image}} />
+      <View style={ProduitThumbnailStylesheet.ImageContainer}>
+        <Image
+          style={ProduitThumbnailStylesheet.Image}
+          source={{uri: props.image}}
+        />
       </View>
-      <Text style={{textAlign: 'center'}}>{props.nom}</Text>
+      <Text style={ProduitThumbnailStylesheet.Name}>{props.nom}</Text>
     </View>
   );
 };
