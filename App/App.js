@@ -2,30 +2,20 @@ import React, {useEffect, useState} from 'react';
 import {Text, View} from 'react-native';
 import AppStylesheet from './App.styles';
 import Button from './components/Button/Button';
+import ButtonClass from './components/ButtonClass/ButtonClass';
+import Produits from './components/Produits/Produits';
+import Splash from './components/Splash/Splash';
 
 function App(props) {
-  const [counter, setcounter] = useState(0);
+  const [screen, setscreen] = useState(null);
   useEffect(() => {
-    console.log('avec effet', counter);
-  }, [counter]);
-  return (
-    <View>
-      <Text
-        style={{
-          ...AppStylesheet.textBlue,
-          ...AppStylesheet.underline,
-          textAlign: 'center',
-        }}>
-        Value du compteur : {counter}
-      </Text>
-      <Button
-        onPress={qqch => {
-          setcounter(counter + 1);
-          console.log(counter);
-        }}>
-        <Text style={AppStylesheet.buttonContent}>add</Text>
-      </Button>
-    </View>
-  );
+    if (screen === null) {
+      setscreen(<Splash />);
+      setTimeout(() => {
+        setscreen(<Produits />);
+      }, 5000);
+    }
+  }, []);
+  return screen;
 }
 export default App;
