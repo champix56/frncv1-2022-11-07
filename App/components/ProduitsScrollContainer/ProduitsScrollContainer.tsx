@@ -1,7 +1,7 @@
 import React from 'react';
 import {ScrollView, View} from 'react-native';
 import I_Produit from '../../interfaces/produit';
-import {connect} from 'react-redux';
+import {connect, useSelector, useDispatch} from 'react-redux';
 import ProduitThumbnail from '../ProduitThumbnail/ProduitThumbnail';
 import ProduitsScrollContainerStylesheet from './ProduitsScrollContainer.styles';
 import {selectCurrent} from '../../store/produits.reducer';
@@ -44,3 +44,16 @@ export const storeMappedProduitsScrollContainer = connect(
 )(ProduitsScrollContainer);
 
 export const unconnectedProduitScrollContainer = ProduitsScrollContainer;
+
+/*nouvelle aproche react-redux*/
+export default (props: any) => {
+  const produits = useSelector((state: any) => state.produits.produits);
+  const dispatch = useDispatch();
+  return (
+    <ProduitsScrollContainer
+      {...props}
+      produits={produits}
+      onPressProduit={(id: number) => dispatch(selectCurrent(id))}
+    />
+  );
+};
