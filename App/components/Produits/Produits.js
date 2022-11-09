@@ -7,14 +7,14 @@ import PropTypes from 'prop-types';
 const Produits = props => {
   return (
     <View style={ProduitsStylesheet.Produits} testID="Produits">
-      <ProduitsScrollContainer produits={props.produits} />
+      <ProduitsScrollContainer />
     </View>
   );
 };
-Produits.propTypes = {
-  produits: PropTypes.array.isRequired,
-};
-Produits.defaultProps = {
-  produits: [],
-};
+// Produits.propTypes = {
+//   produits: PropTypes.array.isRequired,
+// };
+// Produits.defaultProps = {
+//   produits: [],
+// };
 export default Produits;
