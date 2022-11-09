@@ -24,12 +24,13 @@ const ViewProduit = props => {
         </Text>
       </View>
       <View style={{justifyContent: 'space-between'}}>
-        <Button title="add" style={{margin: 5}} />
-        <Button title="remove" style={{margin: 5}} />
+        <Button title="add" style={{margin: 5}} color="skyblue" />
+        <Button title="remove" style={{margin: 5}} color="red" />
         <Button
           title="close"
           onPress={props.onClosePress}
           style={{margin: 5}}
+          color="tomato"
         />
       </View>
     </View>
