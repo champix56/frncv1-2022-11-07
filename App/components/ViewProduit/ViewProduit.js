@@ -12,7 +12,7 @@ const ViewProduit = props => {
       testID="ViewProduit">
       <View
         style={{flexGrow: 1, justifyContent: 'center', alignItems: 'center'}}>
-        <Text style={{textAlign: 'center', fontSize: 15}}>
+        <Text style={{textAlign: 'center', fontSize: 20, fontWeight: '900'}}>
           {props.produit.nom}
         </Text>
         <Image
@@ -23,10 +23,14 @@ const ViewProduit = props => {
           {props.produit.prix}€
         </Text>
       </View>
-      <View>
-        <Button title="add" />
-        <Button title="remove" />
-        <Button title="close" onPress={props.onClosePress} />
+      <View style={{justifyContent: 'space-between'}}>
+        <Button title="add" style={{margin: 5}} />
+        <Button title="remove" style={{margin: 5}} />
+        <Button
+          title="close"
+          onPress={props.onClosePress}
+          style={{margin: 5}}
+        />
       </View>
     </View>
   );
