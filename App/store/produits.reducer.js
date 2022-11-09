@@ -26,6 +26,9 @@ const produitSlice = createSlice({
     selectCurrent: (state, action) => {
       state.currentProduit = state.produits.find(e => e.id === action.payload);
     },
+    clearSelection: (state, action) => {
+      state.currentProduit = null;
+    },
     filterProduits: (s, action) => {
       s.produits = s.fullListProduits.filter(e =>
         e.nom.includes(action.payload),
@@ -60,7 +63,12 @@ export const fetchProduits = createAsyncThunk('produits/fetch', async () => {
   console.log(response);
   return response;
 });
-export const {addProduit, addProduits, selectCurrent, filterProduits} =
-  produitSlice.actions;
+export const {
+  addProduit,
+  addProduits,
+  selectCurrent,
+  filterProduits,
+  clearSelection,
+} = produitSlice.actions;
 
 export default produitSlice.reducer;

@@ -2,7 +2,7 @@ import {StyleSheet} from 'react-native';
 
 const ProduitsScrollContainerStylesheet = StyleSheet.create({
   ProduitsScrollContainer: {
-    height: '100%',
+    // height: '100%',
     backgroundColor: '#E0E0E0',
     marginLeft: 5,
     marginRight: 5,
