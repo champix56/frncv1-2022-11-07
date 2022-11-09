@@ -1,7 +1,7 @@
 import {createSlice} from '@reduxjs/toolkit';
-
+import {produits} from '../../db.json';
 export const initialState = {
-  produits: [],
+  produits: produits,
   currentProduit: null,
 };
 

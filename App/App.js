@@ -1,11 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import {Text, View} from 'react-native';
-import AppStylesheet from './App.styles';
-import Button from './components/Button/Button';
-import ButtonClass from './components/ButtonClass/ButtonClass';
 import Produits from './components/Produits/Produits';
 import Splash from './components/Splash/Splash';
-import {store} from './store/produit.reducer';
+import {store} from './store/store';
 import {Provider} from 'react-redux';
 function App(props) {
   console.log(store);
@@ -25,11 +21,7 @@ function App(props) {
     //Promise.race([pr1,pr2]).then()
 
     //setscreen(<Splash />);
-    setscreen(
-      <Provider store={store}>
-        <Produits />
-      </Provider>,
-    );
+    setscreen(<Produits />);
   }, []);
   // useEffect(() => {
   //   if (produits.length > 0) setscreen(<Produits produits={produits} />);
@@ -37,4 +29,11 @@ function App(props) {
 
   return screen;
 }
-export default App;
+
+export default props => {
+  return (
+    <Provider store={store}>
+      <App {...props} />
+    </Provider>
+  );
+};
