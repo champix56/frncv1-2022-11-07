@@ -10,10 +10,9 @@ const ProduitThumbnail: React.FC<
     <TouchableHighlight
       onPress={evt => {
         props.onProduitPress(props.id);
-      }}>
-      <View
-        style={ProduitThumbnailStylesheet.ProduitThumbnail}
-        testID="ProduitThumbnail">
+      }}
+      style={ProduitThumbnailStylesheet.ProduitThumbnail}>
+      <View testID="ProduitThumbnail">
         <View style={ProduitThumbnailStylesheet.ImageContainer}>
           <Image
             style={ProduitThumbnailStylesheet.Image}
