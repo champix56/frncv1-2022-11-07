@@ -18,19 +18,17 @@ const produitSlice = createSlice({
   initialState,
   reducers: {
     addProduit: (state, action) => {
-      state.produits.push(action.payload.produit);
+      state.produits.push(action.payload);
     },
     addProduits: (state, action) => {
-      state.produits = action.payload.produits;
+      state.produits = action.payload;
     },
     selectCurrent: (state, action) => {
-      state.currentProduit = state.produits.find(
-        e => e.id === action.payload.id,
-      );
+      state.currentProduit = state.produits.find(e => e.id === action.payload);
     },
     filterProduits: (s, action) => {
-      s.produits = s.fullListProduits.filterProduits(e =>
-        e.nom.includes(action.payload.str),
+      s.produits = s.fullListProduits.filter(e =>
+        e.nom.includes(action.payload),
       );
     },
   },
@@ -62,6 +60,7 @@ export const fetchProduits = createAsyncThunk('produits/fetch', async () => {
   console.log(response);
   return response;
 });
-export const {addProduit, addProduits, selectCurrent} = produitSlice.actions;
+export const {addProduit, addProduits, selectCurrent, filterProduits} =
+  produitSlice.actions;
 
 export default produitSlice.reducer;
