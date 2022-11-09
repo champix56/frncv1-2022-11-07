@@ -23,6 +23,7 @@ const ProduitsScrollContainer: React.FunctionComponent<
     </ScrollView>
   );
 };
+/*logique avec map state et map dispatch*/
 //I_ProduitsScrollContainerOwnProps
 // {produits:{produits:[],currentProduits:{}}}
 function mapStateToProps(state: any, ownProps: any) {
@@ -36,7 +37,7 @@ function mapDispatchToProps(dispatch: Function) {
     onPressProduit: (id: number) => dispatch(selectCurrent(id)),
   };
 }
-export default connect(
+export const storeMappedProduitsScrollContainer = connect(
   mapStateToProps,
   mapDispatchToProps,
 )(ProduitsScrollContainer);
