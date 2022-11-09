@@ -12,6 +12,7 @@
     "json": "json-server -p 775 db/db.json"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.0",
     "json-server": "^0.17.1",
     "react": "18.1.0",
     "react-native": "0.70.5",
