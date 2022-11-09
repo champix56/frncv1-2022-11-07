@@ -17,17 +17,21 @@ const produitSlice = createSlice({
   name: 'produits',
   initialState,
   reducers: {
-    addProduit: (state, produit) => {
-      state.produits.push(produit);
+    addProduit: (state, action) => {
+      state.produits.push(action.payload.produit);
     },
-    addProduits: (state, produits) => {
-      state.produits = produits;
+    addProduits: (state, action) => {
+      state.produits = action.payload.produits;
     },
-    selectCurrent: (state, id) => {
-      state.currentProduit = state.produits.find(e => e.id === id);
+    selectCurrent: (state, action) => {
+      state.currentProduit = state.produits.find(
+        e => e.id === action.payload.id,
+      );
     },
-    filterProduits: (s, str) => {
-      s.produits = s.fullListProduits.filterProduits(e => e.nom.includes(str));
+    filterProduits: (s, action) => {
+      s.produits = s.fullListProduits.filterProduits(e =>
+        e.nom.includes(action.payload.str),
+      );
     },
   },
   extraReducers: builder => {
