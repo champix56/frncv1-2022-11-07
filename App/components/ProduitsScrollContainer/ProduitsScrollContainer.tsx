@@ -8,6 +8,7 @@ import {selectCurrent} from '../../store/produits.reducer';
 
 interface I_ProduitsScrollContainerProps {
   produits: Array<I_Produit>;
+  onPressProduit: Function;
 }
 const ProduitsScrollContainer: React.FunctionComponent<
   I_ProduitsScrollContainerProps
