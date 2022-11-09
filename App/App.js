@@ -2,11 +2,27 @@ import React, {useEffect, useState} from 'react';
 import Produits from './components/Produits/Produits';
 import Splash from './components/Splash/Splash';
 import {store} from './store/store';
-import {Provider} from 'react-redux';
+import {Provider, useSelector, useDispatch} from 'react-redux';
+import {fetchProduits} from './store/produits.reducer';
+import {Text, View} from 'react-native';
 function App(props) {
   console.log(store);
   const [screen, setscreen] = useState(null);
   // const [produits, setproduits] = useState([]);
+  const dispatch=useDispatch();
+  const isLoading = useSelector(state => state.produits.loading);
+  useEffect(() => {
+    if (isLoading === 'succeeded') {
+      setscreen(<Produits />);
+    }
+    if (isLoading === 'failed') {
+      setscreen(
+        <View>
+          <Text>Error loading datas</Text>
+        </View>,
+      );
+    }
+  }, [isLoading]);
   useEffect(() => {
     //const pr1 =
     // fetch(
@@ -21,11 +37,9 @@ function App(props) {
     //Promise.race([pr1,pr2]).then()
 
     //setscreen(<Splash />);
-    setscreen(<Produits />);
+    setscreen(<Splash />);
+    dispatch(fetchProduits());
   }, []);
-  // useEffect(() => {
-  //   if (produits.length > 0) setscreen(<Produits produits={produits} />);
-  // }, [produits]);
 
   return screen;
 }
